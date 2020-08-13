@@ -1,0 +1,17 @@
+apply_summarization ( VIdeo INPUT DIR)
+ for each video file
+	apply_summarization_file(video_file_path)
+	
+	apply_ffmpeg(video_file_path) => Creates video frames dire
+	wav_to_intesities(audio_file_path) => audio_log_file_path ( Second)
+  	filter_intesities(0.7,audio_log_file_path) => _timings_array (High Audio Second)
+
+
+	apply_cnn_Frames()
+		match each frame with important frames
+		if the matching score is more than 80% => add that frame timeing to output array 
+	
+		return important_frame_timings
+
+
+	filter_frame_nos()=> Group Frame timings based on +5 -5 logic
